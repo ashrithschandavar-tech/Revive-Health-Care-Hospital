@@ -63,13 +63,16 @@ li a:hover {
 }
 
 .hero-content {
-    max-width: 900px;
+    color: white !important;  /* Forces pure white */
+    text-shadow: 
+        0 0 15px rgba(255,255,255,0.8),  /* Soft glow for visibility */
+        3px 3px 10px rgba(0,0,0,0.6);     /* Keeps depth and premium feel */
 }
 
 .hero h1 {
     font-size: 50px;
     margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px rgb(0, 0, 0);
 }
 
 .hero p {
