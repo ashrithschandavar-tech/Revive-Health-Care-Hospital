@@ -69,7 +69,7 @@ li a:hover {
 .hero h1 {
     font-size: 50px;
     margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
 }
 
 .hero p {
@@ -214,73 +214,4 @@ footer {
     padding: 35px;
     font-size: 18px;
     margin-top: auto;
-}
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    border: 3px solid #000;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.form-container iframe {
-    width: 100%;
-    height: 1000px; /* Adjust if needed */
-    border: none;
-}
-/* Subtle Animated Gradient Background (Whole Site) */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #fff0f5 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 30s ease infinite;
-    z-index: -2;
-    opacity: 0.6;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Parallax Hero Background */
-.hero {
-    position: relative;
-    overflow: hidden;
-    background-attachment: fixed; /* Parallax effect */
-    background-position: center;
-    background-size: cover;
-}
-
-/* Scroll Fade-In Animation for Cards */
-.service-card, .dept-card, .doctor-card {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-}
-
-.service-card.visible, .dept-card.visible, .doctor-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Subtle Wave Overlay in Hero (Add-on) */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(60deg, rgba(220,20,60,0.1), rgba(65,105,225,0.1), rgba(50,205,50,0.1), rgba(255,215,0,0.1));
-    background-size: 400% 400%;
-    animation: waveFlow 20s ease infinite;
-    pointer-events: none;
-}
-
-@keyframes waveFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
