@@ -54,7 +54,7 @@ li a:hover {
 
 .hero {
     background: linear-gradient(to bottom, #4169E1, #DC143C);
-    color: white;
+    text-decoration: white;
     text-align: center;
     padding: 120px 20px;
     display: flex;
