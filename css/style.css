@@ -285,7 +285,7 @@ body::before {
 }
 
 .doctor-card .small-btn {
-    align-self: flex-start; /* Button starts from left */
+    align-self: center; /* Button starts from left */
     margin-top: 20px; /* Consistent space above button */
 }
 .doctor-grid {
