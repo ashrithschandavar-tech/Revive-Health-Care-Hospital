@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // YOUR WEB APP URL HERE
-            const scriptURL = 'https://script.google.com/macros/library/d/1K9oLjeOsETr1X3F-N6HjNTrcte9yDjXwjwFS3f3VmXXlLYqhAGX8ZoQ8/1';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxKaNZ1HNJYASZsR_sRYJJgwtqDvMw2dSX4ewNp1V1IzThF9r8xNhpS-OO790n0HNUl/exec';
 
             fetch(scriptURL, {
                 method: 'POST',
