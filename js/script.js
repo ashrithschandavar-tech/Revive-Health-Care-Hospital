@@ -21,13 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 time: document.getElementById('time').value
             };
 
-            // PASTE YOUR WEB APP URL HERE FROM STEP 3
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxKaNZ1HNJYASZsR_sRYJJgwtqDvMw2dSX4ewNp1V1IzThF9r8xNhpS-OO790n0HNUl/exec';
+            // YOUR WEB APP URL HERE
+            const scriptURL = 'https://script.google.com/macros/s/YOUR-WEB-APP-URL-HERE/exec';
 
             fetch(scriptURL, {
                 method: 'POST',
+                redirect: "follow",
                 body: JSON.stringify(data),
-                headers: { 'Content-Type': 'text/plain' } // Important for Apps Script
+                headers: { 
+                    'Content-Type': 'text/plain'
+                }
             })
             .then(response => response.json())
             .then(result => {
@@ -35,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('Appointment booked successfully! Data saved to Google Sheets.');
                     form.reset();
                 } else {
-                    alert('Error saving appointment. Please try again.');
+                    alert('Error saving appointment: ' + (result.message || 'Unknown error'));
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Network error. Please check your connection.');
+                alert('Network error or server issue. Check console for details.');
             });
         });
     }
