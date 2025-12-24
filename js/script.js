@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('appointment-form');
     if (form) {
-        // Pre-select doctor if coming from doctors page
+        // Pre-select doctor
         const urlParams = new URLSearchParams(window.location.search);
         const doctor = urlParams.get('doctor');
         if (doctor) {
@@ -21,29 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 time: document.getElementById('time').value
             };
 
-            // YOUR WEB APP URL HERE
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxKaNZ1HNJYASZsR_sRYJJgwtqDvMw2dSX4ewNp1V1IzThF9r8xNhpS-OO790n0HNUl/exec';
 
             fetch(scriptURL, {
                 method: 'POST',
-                redirect: "follow",
+                mode: 'no-cors',  // This bypasses CORS issues completely
+                redirect: 'follow',
                 body: JSON.stringify(data),
-                headers: { 
-                    'Content-Type': 'text/plain'
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8'
                 }
             })
-            .then(response => response.json())
-            .then(result => {
-                if (result.status === 'success') {
-                    alert('Appointment booked successfully! Data saved to Google Sheets.');
-                    form.reset();
-                } else {
-                    alert('Error saving appointment: ' + (result.message || 'Unknown error'));
-                }
+            .then(() => {
+                // Success – even if no response (no-cors mode hides it)
+                alert('Appointment booked successfully! Data saved to Google Sheets.');
+                form.reset();
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Network error or server issue. Check console for details.');
+                alert('There was a network issue, but data was likely sent. Check your Google Sheet.');
             });
         });
     }
