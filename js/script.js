@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 time: document.getElementById('time').value
             };
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyqMDQdRWnvavNzCKmoeH3rRbrGwGdnf9LKq1rW2_03o71pWcGORG9Yp_cDeCBHXdzA/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwWDX7VmpKDqIVLsVZXmwk5gLKbx_nsAdegOqR3Zdg8dVJPZvNolUESGdU__b5R-Pmx/exec';
 
             fetch(scriptURL, {
                 method: 'POST',
