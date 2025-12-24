@@ -297,7 +297,7 @@ body::before {
 }
 
 .doctor-card {
-    height: 480px; /* Adjust this number if needed – test 450-500px */
+    height: 400px; /* Adjust this number if needed – test 450-500px */
     overflow: hidden; /* Prevents text overflow */
 }
 .doctor-grid {
