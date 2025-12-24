@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Multi-Specialty Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Multi-Specialty Hospital</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="appointment.html">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="appointment">
+        <h1>Book an Appointment</h1>
+        <form id="appointment-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" required>
+                <option value="">Choose a Doctor</option>
+                <option value="Alice Smith">Dr. Alice Smith - General Medicine</option>
+                <option value="Bob Johnson">Dr. Bob Johnson - General Medicine</option>
+                <option value="Carol Davis">Dr. Carol Davis - Surgery</option>
+                <option value="David Wilson">Dr. David Wilson - Surgery</option>
+                <option value="Eve Martinez">Dr. Eve Martinez - Orthopedics</option>
+                <option value="Frank Garcia">Dr. Frank Garcia - Orthopedics</option>
+                <option value="Grace Rodriguez">Dr. Grace Rodriguez - Gynecology</option>
+                <option value="Henry Hernandez">Dr. Henry Hernandez - Gynecology</option>
+                <option value="Isla Lopez">Dr. Isla Lopez - Pediatrics</option>
+                <option value="Jack Gonzalez">Dr. Jack Gonzalez - Pediatrics</option>
+                <option value="Kara Anderson">Dr. Kara Anderson - Plastic Surgery</option>
+                <option value="Liam Thomas">Dr. Liam Thomas - Plastic Surgery</option>
+                <option value="Mia Jackson">Dr. Mia Jackson - Dermatology</option>
+                <option value="Noah White">Dr. Noah White - Dermatology</option>
+                <option value="Olivia Harris">Dr. Olivia Harris - Radiology</option>
+                <option value="Paul Martin">Dr. Paul Martin - Radiology</option>
+                <option value="Quinn Lee">Dr. Quinn Lee - Cardiology</option>
+                <option value="Riley Walker">Dr. Riley Walker - Neurology</option>
+                <option value="Sam Young">Dr. Sam Young - ENT</option>
+                <option value="Taylor King">Dr. Taylor King - Ophthalmology</option>
+            </select>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit" class="btn primary-btn">Submit Appointment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Multi-Specialty Hospital. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
