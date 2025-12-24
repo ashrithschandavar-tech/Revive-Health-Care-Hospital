@@ -270,3 +270,36 @@ body::before {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+/* Align Book Appointment buttons at the bottom of doctor cards */
+.doctor-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+    height: 100%; /* Makes all cards same height in grid */
+    padding-bottom: 20px; /* Extra space at bottom */
+}
+
+.doctor-card h3,
+.doctor-card p {
+    margin-bottom: auto; /* Keeps text at top */
+}
+
+.doctor-card .small-btn {
+    align-self: flex-start; /* Button starts from left */
+    margin-top: 20px; /* Consistent space above button */
+}
+.doctor-grid {
+    grid-template-rows: masonry; /* Not needed */
+    /* Force same height */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.doctor-card {
+    height: 480px; /* Adjust this number if needed – test 450-500px */
+    overflow: hidden; /* Prevents text overflow */
+}
+.doctor-grid {
+    align-items: stretch; /* Makes all rows same height */
+}
