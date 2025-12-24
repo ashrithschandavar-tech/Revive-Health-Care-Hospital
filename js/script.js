@@ -25,21 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetch(scriptURL, {
                 method: 'POST',
-                mode: 'no-cors',  // This bypasses CORS issues completely
-                redirect: 'follow',
+                redirect: "follow",
                 body: JSON.stringify(data),
                 headers: {
-                    'Content-Type': 'text/plain;charset=utf-8'
+                    'Content-Type': 'text/plain;charset=utf-8'  // This makes it a "simple request" – no CORS preflight
                 }
             })
-            .then(() => {
-                // Success – even if no response (no-cors mode hides it)
-                alert('Appointment booked successfully! Data saved to Google Sheets.');
+            .then(response => response.json())
+            .then(result => {
+                if (result.status === 'success') {
+                    alert('Appointment booked successfully! Data saved to Google Sheets.');
+                } else {
+                    alert('Error: ' + result.message);
+                }
                 form.reset();
             })
             .catch(error => {
-                console.error('Error:', error);
-                alert('There was a network issue, but data was likely sent. Check your Google Sheet.');
+                alert('Network error – try again. Details: ' + error.message);
             });
         });
     }
