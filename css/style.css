@@ -303,3 +303,30 @@ body::before {
 .doctor-grid {
     align-items: stretch; /* Makes all rows same height */
 }
+/* Light Watermark Icon in Hero */
+.hero {
+    position: relative; /* Needed for positioning */
+}
+
+.hero-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Large but not full screen */
+    max-width: 800px;
+    opacity: 0.15; /* Very light – adjust 0.1 to 0.3 if needed */
+    pointer-events: none; /* Doesn't block clicks */
+    z-index: 1; /* Behind text */
+}
+
+.hero-watermark img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Text and buttons on top */
+}
