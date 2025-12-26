@@ -61,10 +61,6 @@ li a:hover {
     align-items: center;
     justify-content: center;
 }
-.hero {
-    background: linear-gradient(to bottom, #4169E1, #DC143C);
-    color: white;  /* Makes all hero text white */
-}
 
 .hero-content {
     max-width: 900px;
@@ -115,7 +111,7 @@ li a:hover {
 
 h1, h2 {
     font-size: 42px;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 60px;
     position: relative;
 }
