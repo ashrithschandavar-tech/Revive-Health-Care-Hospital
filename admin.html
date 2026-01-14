@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Revive Healthcare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Revive Healthcare - Admin</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="appointment">
+    <h1>All Appointments</h1>
+
+    <table border="1" width="100%" cellpadding="10" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="appointments-table">
+            <!-- Data will come here -->
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>&copy; 2024-2026 Revive Healthcare Hospital. All rights reserved.</p>
+</footer>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
